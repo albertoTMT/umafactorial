@@ -1,0 +1,48 @@
+git init  ->Inicia Git.
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/albertoTMT/umafactorial.git
+git push -u origin master
+cd Desktop -> Nos situa en el escritorio de nuestro PC.
+git clone https://github.com/albertoTMT/umafactorial.git ->2. Clona el repositorio en la ubicacion de nuestro pc en la que nos encontremos.
+cd umafactorial
+touch factorial.java -> Crea el fichero dentro de la carpeta umafactorial en nuestro PC.
+git add factorial.java -> Añade el fichero.
+git commit -m "implementacion inicial" -> Comentario que aparecera cuando se suba a github.com
+git add factorial.java
+git commit -m "refactorizacion"
+git push origin master -> Sube los archivos a la rama master en el repositorio de github.
+git checkout -b recursivo -> Crea una rama recursivo y cambia a ella directamente.
+git add factorial.java
+git commit -m "implementacion recursiva"
+git push origin recursivo -> Sube los archivos a la rama recursivo en github.
+git checkout master -> Cambia a la rama master.
+git add factorial.java
+git commit -m "correcion numeros negativos"
+git push origin master
+git checkout recursivo
+git add factorial.java
+git commit -m "optimizacion"
+git push origin recursivo
+git checkout master
+git merge recursivo -> Mezcla la rama en la que estes(en ese momento la master) con la rama recursivo.
+git add factorial.java
+git commit
+git checkout -b refac0
+git add factorial.java
+git commit -m "refactorizacion de metodo de entrada"
+git stash -> Guarda temporalmente en el stash los cambios que se acaban de realizar.
+git checkout master
+git add factorial.java
+git commit -m "cambio de long a BigInteger"
+git push origin master
+git checkout refac0
+git stash pop -> Recuperamos los cambios de guardamos de forma temporal en el stash.
+git add factorial.java
+git commit -m "refactorizacion de metodo de salida"
+git checkout master
+git merge refac0
+git add factorial.java
+git commit -m "mezcla de rama refac0"
+git push origin master
+
